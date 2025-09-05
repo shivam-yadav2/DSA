@@ -37,16 +37,31 @@
 // Output: [0,1]
 // Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
-var twoSum = function(nums, target) {
-    const res = []
-    for(let i=0;i<nums.length;i++){
-        for(let j=i+1;j<nums.length;j++){
-            if(nums[i]+nums[j]===target){
-                res.push(i,j)
-                return res
-            }
-        }
-    }
-};
+// var twoSum = function(nums, target) {
+//     const res = []
+//     for(let i=0;i<nums.length;i++){
+//         for(let j=i+1;j<nums.length;j++){
+//             if(nums[i]+nums[j]===target){
+//                 res.push(i,j)
+//                 return res
+//             }
+//         }
+//     }
+// };
 
-nums = [2,7,11,15], target = 9
+// nums = [2,7,11,15], target = 9
+
+// let name = prompt("Enter your name:");
+// alert("Hello, " + name + "!");
+
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question("Enter your name: ", function(name) {
+  console.log("Hello, " + name);
+  rl.close();
+});
